@@ -6,12 +6,12 @@
 
 const MIN_NUM = 15;
 const MAX_NUM = 35;
-let attempts = 4;
+let attempts_1 = 4;
 let multiple = 6;
 
 // for
 
-for (let i = 1; i < attempts; i++) {
+for (let i = 1; i < attempts_1; i++) {
   const inputUser = Number(prompt("Enter Number, you have 3 attempts"));
   if (inputUser > MIN_NUM && inputUser < MAX_NUM) {
     if (inputUser % multiple === 0) {
@@ -24,8 +24,9 @@ for (let i = 1; i < attempts; i++) {
 
 // // while
 
-let count = 1;
-while (count < attempts) {
+let count = 0;
+let attempts_2 = 3;
+while (count < attempts_2) {
   const inputUser = Number(prompt("Enter Number, you have 3 attempts"));
 
   if (inputUser > MIN_NUM && inputUser < MAX_NUM) {
@@ -97,8 +98,8 @@ const checkMultiplicity = function (value_1, value_2 = 6) {
   return value_1 % value_2 === 0;
 };
 
-debugger;
-for (let i = 1; i < attempts; i++) {
+
+for (let i = 1; i < attempts_1; i++) {
   const inputUser = checkInputUser(getUserInput());
 
   if (checkRange(inputUser)) {
