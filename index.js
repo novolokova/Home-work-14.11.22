@@ -6,14 +6,17 @@
 
 const MIN_NUM = 15;
 const MAX_NUM = 35;
+let attempts = 4;
+let multiple = 6;
+
 
 // for
 
-for (let i = 1; i < 4; i++) {
+for (let i = 1; i < attempts; i++) {
   const inputUser = Number(prompt("Enter Number, you have 3 attempts"));
   if (inputUser > MIN_NUM && inputUser < MAX_NUM) {
-    if (inputUser % 6 === 0) {
-      console.log('This is right');
+    if (inputUser % multiple === 0) {
+      console.log("This is right");
       break;
     }
   }
@@ -22,12 +25,12 @@ for (let i = 1; i < 4; i++) {
 
 // while
 
-let count = 0;
-while (count < 3) {
+let count = 1;
+while (count < attempts) {
   const inputUser = Number(prompt("Enter Number, you have 3 attempts"));
 
   if (inputUser > MIN_NUM && inputUser < MAX_NUM) {
-    if (inputUser % 6 === 0) {
+    if (inputUser % multiple === 0) {
       console.log('This is right');
       break;
     }
@@ -35,5 +38,13 @@ while (count < 3) {
   count++;
   console.log(`try again: ${count} attempt`);
 }
+
+
+
+
+
+
+
+
 
 
