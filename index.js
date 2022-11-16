@@ -11,37 +11,37 @@ let multiple = 6;
 
 // for
 
-// for (let i = 0; i < attempts; i++) {
-//   const inputUser = Number(prompt("Enter Number, you have 3 attempts"));
-//   if (
-//     inputUser > MIN_NUM &&
-//     inputUser < MAX_NUM &&
-//     inputUser % multiple === 0
-//   ) {
-//     console.log("This is right");
-//     break;
-//   }
-//   console.log(`try again: ${i + 1} attempt`);
-// }
+for (let i = 0; i < attempts; i++) {
+  const inputUser = Number(prompt("Enter Number, you have 3 attempts"));
+  if (
+    inputUser > MIN_NUM &&
+    inputUser < MAX_NUM &&
+    inputUser % multiple === 0
+  ) {
+    console.log("This is right");
+    break;
+  }
+  console.log(`try again: ${i + 1} attempt`);
+}
 
 // while
 
-// let count = 0;
+let count = 0;
 
-// while (count < attempts) {
-//   const inputUser = Number(prompt("Enter Number, you have 3 attempts"));
+while (count < attempts) {
+  const inputUser = Number(prompt("Enter Number, you have 3 attempts"));
 
-//   if (
-//     inputUser > MIN_NUM &&
-//     inputUser < MAX_NUM &&
-//     inputUser % multiple === 0
-//   ) {
-//     console.log("This is right");
-//     break;
-//   }
-//   count++;
-//   console.log(`try again: ${count} attempt`);
-// }
+  if (
+    inputUser > MIN_NUM &&
+    inputUser < MAX_NUM &&
+    inputUser % multiple === 0
+  ) {
+    console.log("This is right");
+    break;
+  }
+  count++;
+  console.log(`try again: ${count} attempt`);
+}
 
 /*********************************************/
 // СПРОБА зробити детерміновані та чисті функції
@@ -91,12 +91,12 @@ const showOutput = function (text) {
 /**
  *
  * @param {number} value
- * @param {number} MIN_NUM
- * @param {number} MAX_NUM
+ * @param {number} minNam
+ * @param {number} maxNum
  * @returns {number, boolean}
  */
-const checkRange = function (value, MIN_NUM = 15, MAX_NUM = 35) {
-  if (value > MIN_NUM && value < MAX_NUM) {
+const checkRange = function (value, minNam = 15, maxNum = 35) {
+  if (value > minNam && value < maxNum) {
     return value;
   }
   return false;
@@ -126,4 +126,4 @@ function guessNumber() {
     showOutput(showAttempts(i));
   }
 }
-guessNumber();
+//guessNumber();
