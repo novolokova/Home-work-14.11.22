@@ -91,12 +91,12 @@ const showOutput = function (text) {
 /**
  *
  * @param {number} value
- * @param {number} minNum
- * @param {number} maxNum
+ * @param {number} MIN_NUM
+ * @param {number} MAX_NUM
  * @returns {number, boolean}
  */
-const checkRange = function (value, minNum = 15, maxNum = 35) {
-  if (value > minNum && value < maxNum) {
+const checkRange = function (value, MIN_NUM = 15, MAX_NUM = 35) {
+  if (value > MIN_NUM && value < MAX_NUM) {
     return value;
   }
   return false;
